@@ -41,6 +41,7 @@ font-weight: 700;
 font-family: "Poppins";
 text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(--blue),1px 1px var(--blue),-1px -1px var(--blue),1px -1px var(--blue),-1px 1px var(--blue);
 }
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -65,9 +66,48 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
      background:#ffffff;
      height: 3px;
  }
+ .checkbox {
+    display: none;
+ }
  .big{
    width: 30px;
  }
+    /* sidebar */
+.sidebar {
+    position: fixed;
+    transition: all  1s linear;
+    top: 0;
+    right: -450px;
+    width: 15rem;
+    padding: 1rem;
+    height: 100vh;
+    background-color:var(--darkBlue);
+    display: flex;
+    visibility: hidden;
+    justify-content: space-between;
+    z-index: 99;
+  }
+
+  .sidebar li{
+     list-style: none;
+     padding: .75rem;
+     
+  }
+  .openSidebar:checked + .sidebar{
+    right: 0;
+    visibility: visible;
+    display: flex;
+  }
+  .close{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent;
+  }
+  .close img{
+    width: 20px;
+    height: 20px;
+  }
 /* Overview Section */
 .formAndOverview {
     background: url(./images/hero-bg.jpg) no-repeat top right;
@@ -84,7 +124,7 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
 .overview .para {
     width: 29rem;
     font-size: .85rem;
-    padding:1rem 0  3rem;
+    padding:1rem 0  2rem;
 }
 .overview {
     width: 90%;
@@ -100,6 +140,10 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
 .readMoreBtn, .findMoreBtn, .quoteBtn{
     border:1.5px solid var(--darkBlue);
     color: var(--darkBlue);
+}
+.readMoreBtn:hover, .findMoreBtn:hover, .goodDeal .quoteBtn:hover {
+    background-color: var(--darkBlue);
+    color: #ffffff;
 }
 /* Search Section */
 .search {
@@ -135,8 +179,29 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     gap: 5rem;
     padding: 4rem 0 5rem;
+}
+.box {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background-color: var(--blue);
+}
+.box::before {
+    content:"";
+    position: absolute;
+    bottom: 65%;
+    right: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--darkBlue);
+}
+.boxContainer {
+    position: absolute;
+    bottom: -40px;
+    right: 0;
 }
 .about .para {
     width: 22rem;
@@ -165,7 +230,7 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
 }
 /* Sale Cards */
 .cardContainer {
@@ -299,8 +364,9 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
 .reviewCard {
     display: flex;
     gap: 2rem;
-    padding:2.5rem 1rem;
+    padding:2.5rem 6.5rem;
     align-items: center;
+    position: relative;
     margin-top: 2rem;
     border: 1px solid var(--darkBlue);
 }
@@ -322,12 +388,24 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
 }
 .arrowBtn {
     background:var(--darkBlue);
-    width: 54px;
-    height: 30px ;
+    width: 30px;
+    height: 30px;
+    position: absolute;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.leftArrow {
+    left: 10px;
+    bottom: 50%;
+}
+.rightArrow {
+    right: 10px;
+    bottom: 50%;
+}
+.leftArrow, .rightArrow {
+    transform: translate(0,50%);
 }
 .arrow {
     width: 5px;
@@ -552,7 +630,7 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
     }
     .cards {
          flex-direction: column;
-         gap:1.25rem;
+         gap:2.25rem;
     }
     .card, .cardImage, .card .para {
          width: 100%;
@@ -659,11 +737,11 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
          width: 30px;
     }
     .leftArrow {
-         bottom: 5px;
+         bottom: 20px;
          left: 38%;
     }
     .rightArrow {
-        bottom:5px;
+        bottom:20px;
         right: 38%;
     }
     .arrowBtn {
@@ -708,5 +786,127 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
     }
     .bigScreen {
          display: none;
+    }
+}
+@media (min-width:600px) and (max-width:1200px) {
+     .formAndOverview {
+        background:none;
+     }
+     .navLinks a {
+        color: var(--darkBlue);
+     }
+     .sidebar a {
+        color: #ffffff;
+     }
+     .overview .content {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+     }
+     .overview .heading {
+        text-align: center;
+     }
+     .overview .heading h1{
+        font-size: 4rem;
+     }
+     .content .para {
+        text-align: center;
+     }
+     .toogleLine {
+        background: var(--darkBlue);
+     }
+     /* Good Deal Section */
+     .goodDeal {
+        flex-direction: column-reverse;
+        width: 90%;
+        margin: auto;
+        align-items: center;
+        padding: 0;
+        padding-bottom: 1.5rem;
+        gap: 1rem;
+   }
+   .goodDealContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+   }
+   .goodDeal img {
+        width: 100%;
+        height: auto;
+        max-width: 450px;
+   }
+   .goodDeal .imageTwo {
+        position: static;
+   }
+   .goodDeal .imageOne {
+         max-height: 450px;
+   }
+    .goodDealPara {
+        width: 100%;
+        max-width: 500px;
+        padding:1rem  0 1.5rem;
+    }
+    .tabletHeadingSection {
+        display: flex;
+    }
+    .notTablet {
+         display: none;
+    }
+     /* About Section */
+     .about {
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+    }
+    .about .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 3rem
+    }
+    .about .para {
+        width: 100%;
+        padding: 1rem 0;
+        max-width:500px ;
+    }
+    .about .image {
+        width: 100%;
+        max-width: 500px;
+    }
+    .mobHeadingSection {
+        display: flex;
+        padding-bottom: 1rem;
+        justify-content: center;
+    }
+    .headingSection h2 {
+        font-size: 1.25rem;
+    }
+    .search .form {
+        width: 100%;
+    }
+    .quickLinks {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .quickLinksOne, .quickLinksTwo {
+        gap: 4rem;
+        justify-content: center;
+    }
+    
+    .horizontalLine {
+        width: 100%;
+        transform: none;
+    }
+    .footer {
+        margin: auto;
+    }
+    .copyRight {
+        width: 100%; 
+        transform: none;
+        text-align: center;
+    }
+    .socialLinks {
+        position: static;
+        justify-content: center;
     }
 }

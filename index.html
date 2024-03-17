@@ -7,24 +7,40 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- Navbar -->
     <section class="formAndOverview">
     <nav>
+         <!-- Navbar -->
         <div class="navbar">
             <h1 class="logo">
                    TEASER
             </h1>
+            <!-- Navbar Links -->
             <div class="navLinks">
                 <a href="" class="bigScreen">Login</a>
                 <a href="" class="bigScreen">Sign up</a>
-                <div class="toggleBtn">
+                <!-- Toggle Button -->
+                <label for="toggle" class="toggleBtn">
                     <div class="toogleLine big"></div>
                     <div class="toogleLine"></div>
                     <div class="toogleLine"></div>
-               </div>
+                </label>
+                <input type="checkbox" name="" id="toggle" class="openSidebar checkbox">
+                <!--Sidebar-->
+               <div class="sidebar" id='sidebar'>
+                <ul>
+                  <li><a href="">Home</a></li>
+                   <li><a href="">About</a></li>
+                    <li><a href="">House</a></li>
+                    <li><a href="">Pricing</a></li>
+                </ul>
+                <label for="toggle" class="close">
+                    <img src="./icons/close.png" alt=""/>
+                </label>
+              </div>
             </div>
         </div>
     </nav>
+    <!-- Overview Section -->
     <section class="overviewContainer">
         <div class="overview">
             <div class="content">
@@ -39,6 +55,7 @@
         </div>
     </section>
     </section>
+    <!-- Search Section -->
     <div class="search">
         <form action="" class="form">
             <input type="text" class="searchInput" placeholder="Search Your Categories" />
@@ -48,15 +65,16 @@
             </button>
         </form>
      </div>
+     <!-- About Section -->
      <section class="aboutContainer">  
         <div class="about">
-            <div class="mobHeadingSection headingSection mobile">
+            <div class="mobHeadingSection headingSection mobile tabletHeadingSection">
                 <span class="vertical"></span>
                 <h2>About Our Apartment</h2>
             </div>
             <img src="./images/AboutImage.png" alt="" class="image">
             <div class="content">
-                <div class="headingSection bigScreen">
+                <div class="headingSection bigScreen notTablet">
                     <span class="vertical"></span>
                     <h2>About Our Apartment</h2>
                 </div>
@@ -65,8 +83,12 @@
                 </p>
                 <button class="readMoreBtn">READ MORE</button>
             </div>
+            <div class="boxContainer bigScreen notTablet">
+                <div class="box"></div>
+            </div>
         </div>
      </section>
+     <!-- Sales Section -->
      <section class="saleContainer">
         <div class="sale">
             <div class="headingSection">
@@ -74,6 +96,7 @@
                 <h2>House For Sale</h2>
             </div>
             <p>There are many variations of passages of Lorem Ipsum available, but the</p>
+            <!-- Subscription Cards -->
         <div class="cardContainer">
             <div class="cards">
                 <div class="card">
@@ -113,6 +136,7 @@
               <button class="findMoreBtn">FIND MORE</button>
         </div>
      </section>
+     <!-- Pricing Section -->
      <section class="pricingContainer">
         <div class="pricing">
             <div class="headingSection">
@@ -175,9 +199,10 @@
             </div>
         </div>
      </section>
+     <!-- Good Deal Section -->
      <section class="goodDeal">
         <div class="goodDealContent">
-            <div class="headingSection bigScreen">
+            <div class="headingSection bigScreen notTablet">
                 <span class="vertical"></span>
                 <h2>Very Good Deal For House</h2>
             </div>
@@ -186,13 +211,14 @@
             </p>
                <button class="quoteBtn">Get A Quote</button>
              </div>
-             <img src="./images/d-1.png" alt="">
+             <img src="./images/d-1.png" class="imageOne" alt="">
              <img src="./images/d-2.png" class="imageTwo" alt="">
-             <div class="mobHeadingSection headingSection mobile">
+             <div class="mobHeadingSection headingSection mobile tabletHeadingSection">
                 <span class="vertical"></span>
                 <h2>Very Good Deal For House</h2>
             </div>
      </section>
+     <!-- Choose Us Section -->
      <section class="chooseUs">
         <div class="headingSection">
             <span class="vertical"></span>
@@ -222,11 +248,13 @@
         </div>
         <button class="quoteBtn">Get A Quote</button>
      </section>
+     <!-- Review Section -->
      <section class="reviews">
         <div class="headingSection">
             <span class="vertical"></span>
             <h2>What is Says Our Customer</h2>
         </div>
+        <!-- Review Card -->
         <div class="reviewCard">
             <button class="arrowBtn leftArrow"><img src="./images/arrow-point-to-right.png" class="arrow" alt=""></button>
             <div class="review">
@@ -242,6 +270,7 @@
             <button class="arrowBtn rightArrow"><img src="./images/arrow-point-to-right_copy.png" class="arrow" alt=""></button>
         </div>
      </section>
+     <!-- Footer Section -->
      <footer class="footerSection">
         <div class="headingSection">
             <span class="vertical"></span>
@@ -259,6 +288,7 @@
                     <button class="sendBtn">SEND</button>
                 </form>
             </div>
+            <!-- Quick Links -->
             <div class="quickLinks">
                 <div class="quickLinksOne">
                 <div class="apartment">
@@ -296,6 +326,7 @@
                 </div>
             </div>
             </div>
+            <!-- Social Links -->
             <div class="socialLinks">
                 <a href=""><img class="socialIcon" src="./icons/facebook.png" alt=""></a>
                 <a href=""><img class="socialIcon" src="/icons/twitter.png" alt=""></a>
