@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+p {
+    font-size: .85rem;
+}
+button{
+    cursor: pointer;
+}
+:root {
+    --blue:#3554D1;
+    --darkBlue:#0F2480;
+    --yellow:#F9BC16;
+    --orange:#F97616;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+button {
+    border: none;
+    background: transparent;
+}
+.aboutContainer, .saleContainer {
+    width: 92%;
+    margin: auto;
+}
+.priceCardContainer,.reviewCard{
+    width: 80%;
+    margin: auto;
+}
+.logo { 
+    font-size: 35px;
+text-transform: uppercase;
+color: #ffffff;
+font-weight: 700;
+font-family: "Poppins";
+text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(--blue),1px 1px var(--blue),-1px -1px var(--blue),1px -1px var(--blue),-1px 1px var(--blue);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: .5rem;
+    width: 95%;
+    margin: auto;
+    align-items: center;
+}
+.navLinks{
+    display: flex;
+    gap: 2rem;
+}
+/* Toggle Btn */
+.toggleBtn{
+    display: flex;
+    flex-direction:column;
+    align-items: end;
+    gap: .25rem;
+ }
+ .toogleLine{
+     width: 15px;
+     background:#ffffff;
+     height: 3px;
+ }
+ .big{
+   width: 30px;
+ }
+/* Overview Section */
+.formAndOverview {
+    background: url(./images/hero-bg.jpg) no-repeat top right;
+    background-size: 50rem 100%;
+}
+.overviewContainer h1{
+    color: var(--blue);
+    font-size: 3rem;
+    line-height: 1.2;
+}
+.overview .heading h1:nth-child(1) {
+    color:var(--darkBlue);
+}
+.overview .para {
+    width: 29rem;
+    font-size: .85rem;
+    padding:1rem 0  3rem;
+}
+.overview {
+    width: 90%;
+    margin: auto;
+    padding: 5rem 0 7.5rem;
+}
+.readMoreBtn, .findMoreBtn, .quoteBtn, .sendBtn {
+    background: transparent;
+    padding: .5rem 2rem;
+    border-radius: 21px;
+    font-weight: 550;
+}
+.readMoreBtn, .findMoreBtn, .quoteBtn{
+    border:1.5px solid var(--darkBlue);
+    color: var(--darkBlue);
+}
+/* Search Section */
+.search {
+    display: flex;
+    justify-content: center;
+}
+.search .searchInput {
+    width: 25rem;
+    height: 2.5rem;
+    border: 1.25px solid var(--darkBlue);
+    padding-left: 15px;
+}
+.searchInput::placeholder {
+    color: var(--darkBlue);
+}
+.form {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: translate(0,-40%);
+    z-index: 2;
+    background: #FFFFFF;
+}
+.searchBtn {
+    width: 12rem;
+    height: 2.5rem;
+    color: #ffffff;
+    background: var(--orange);
+}
+/* About Section */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 4rem 0 5rem;
+}
+.about .para {
+    width: 22rem;
+    padding: 1rem 0  2rem;
+}
+.about .image {
+    width: 28rem;
+}
+.headingSection {
+    display: flex;
+    align-items: center;
+}
+.headingSection h2 {
+    font-size: 2rem;
+    display: inline-block;
+}
+.vertical{
+    display: inline-block;
+    height:  2.5rem;
+    width: 6px;
+    margin-right: 2px;
+    background: var(--darkBlue);
+}
+/* Sale Section */
+.sale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+/* Sale Cards */
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 0 3rem;
+}
+.cards {
+    display: flex;
+    gap: 2%;
+}
+.card {
+    width: 32%;
+}
+.cardImage {
+    width: 100%;
+    object-fit: cover;
+}
+.cardName {
+    font: .75rem;
+}
+.card .para {
+    line-height: 1.2;
+    width: 90%;
+}
+/* Pricing Section */
+.pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.priceCardContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0;
+}
+.priceCard {
+    width: 32%;
+    text-align: center;
+}
+.priceCard .cardHeader {
+    background: var(--darkBlue);
+    color: #FFFFFF;
+    padding: 1.5rem 0;
+}
+.priceCard .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--blue);
+    color:#ffffff;
+    padding:2rem 0 1.5rem;
+    line-height: 2.25;
+}
+.priceCard .content h2 {
+    line-height: 1.85;
+}
+.priceCard:hover .content{
+    background: var(--yellow);
+}
+.horizontal {
+    width: 2.25rem;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+.buyNowBtn {
+    color: #ffffff;
+    background: var(--darkBlue);
+    padding: .3rem 1.5rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+.priceCard:hover .buyNowBtn{
+    background: var(--yellow);
+}
+
+/* Good Deal Section */
+.goodDeal {
+    display: flex;
+    padding: 3rem 0 4rem 9%;
+    gap: 1rem;
+}
+.goodDeal .quoteBtn {
+    margin-left:.75rem ;
+}
+.goodDeal .imageTwo {
+    height: 15.5rem;
+    position: relative;
+    top: 3rem 
+}
+.goodDealPara {
+    width: 27rem;
+    padding:1rem  0.75rem 1.5rem;
+}
+/* Choose Us Section */
+.chooseCardContainer {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding: 2rem 0;
+}
+.chooseUs {
+    background: var(--darkBlue);
+    text-align: center;
+    color: #ffffff;
+    padding-bottom: 1rem;
+}
+.chooseUs .headingSection {
+    justify-content: center;
+    padding: 1.5rem 0;
+}
+.chooseUs .headingSection h2 {
+    font-size: 1.25rem;
+    padding-left: 2px;
+}
+.chooseUs .vertical {
+    height: 2rem;
+    background-color: #ffffff;
+    width: 5px;
+}
+.chooseUs .quoteBtn{
+    background: #ffffff;
+}
+.chooseImage {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+/* Review Section */
+.reviewCard {
+    display: flex;
+    gap: 2rem;
+    padding:2.5rem 1rem;
+    align-items: center;
+    margin-top: 2rem;
+    border: 1px solid var(--darkBlue);
+}
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.5rem  0; 
+}
+.review .content{
+    padding-top: 1rem;
+}
+.review .para{
+    padding-top: 1rem;
+}
+.review{
+    display: flex;
+    gap: 1rem;
+}
+.arrowBtn {
+    background:var(--darkBlue);
+    width: 54px;
+    height: 30px ;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow {
+    width: 5px;
+}
+.reviews .imageContainer {
+    position: relative;
+}
+.review .horizontal {
+    display: inline-block;
+    background-color: var(--darkBlue);
+    margin: 0;
+}
+.verticalBox {
+    position: absolute;
+    width: 50%;
+    height: 120%;
+    background: var(--darkBlue);
+    bottom: 25%;
+    bottom: -8%;
+    z-index: -2;
+}
+/* Footer Section */
+.footerSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mapAndForm {
+    display: flex;
+    justify-content: space-between;
+}
+.footer {
+    width: 85%;
+}
+.footerContainer {
+    background: var(--darkBlue);
+    width: 100%;
+    margin-top: 2rem;
+    position: relative;
+}
+.map {
+    width: 50%;
+}
+.contactForm {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    padding-top: 2rem;
+}
+.contactInput {
+    height: 2.5rem;
+    padding-left: 10px;
+    width: 100%;
+}
+.message {
+    height: 8rem;
+    padding-left: 10px;
+    width: 100%;
+}
+.message::placeholder {
+    transform: translate(0,3rem);
+}
+.sendBtn {
+    color: #ffffff;
+    background: var(--orange);
+    padding: .5rem 3rem;
+    margin-top: .5rem;
+}
+.quickLinks h3 {
+    color: #ffffff;
+    font-weight: 400;
+    padding:4rem 0 1rem;
+}
+.quickLinks, .quickLinksOne, .quickLinksTwo, .link {
+    display: flex;
+}
+.apartment, .information, .newsletter, .usefulLink, .newsletterForm, .links {
+    display: flex;
+    flex-direction: column;
+}
+.quickLinks {
+    justify-content: end;
+}
+.quickLinksOne, .quickLinksTwo, .quickLinks {
+    gap: 4rem;
+}
+.information, .usefulLink, .link {
+    gap: 8px;
+}
+.links {
+    gap: 1.5rem;
+}
+.emailInput {
+    width: 200px;
+    height: 31px;
+    padding-left: 8px;
+}
+.subscribeBtn {
+    width: 100px;
+    height: 30px;
+    color: #ffffff;
+    background: var(--orange);
+    margin-top: 1rem;
+}
+.horizontalLine {
+    width: 50%;
+    height: 1.5px;
+    background: #ffffff;
+    transform: translate(75%,0);
+    margin: 1rem 0;
+}
+.copyRight {
+    width: 50%;
+    transform: translate(100%,0);
+    color: #ffffff;
+    padding-bottom: 1rem;
+}
+.socialLinks {
+    position: absolute;
+    display: flex;
+    gap: 15px;
+    bottom: 6rem;
+    right: 15.25rem;
+    align-items: end;
+}
+.mobile{
+    display: none;
+}
+/* Mobile Responsive */
+@media (max-width:420px) {
+    p{
+        text-align: justify;
+    }
+    .navbar{
+        width: 90%;
+    }
+    .formAndOverview {
+        background: none;
+    }
+    .bigScreen {
+         display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .logo{
+        font-size: 25px;
+    }
+    .navbar {
+        padding-top: .5rem;
+    }
+    .navLinks {
+        display: flex;
+        gap: 2rem;
+    }
+    .toogleLine {
+        background: var(--darkBlue);
+    }
+    /* Overview Section */
+    .overviewContainer h1 {
+       text-align: center;
+    }
+    .overview .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .overview .para {
+        width: 100%;
+    }
+    /* Search Section */
+    .search, .aboutContainer {
+        width: 90%;
+        margin: auto;
+    }
+    .search .searchInput {
+        width: 100%;
+    }
+    .searchInput::placeholder {
+        color: var(--darkBlue);
+    }
+    .form {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* About Section */
+    .about {
+        flex-direction: column;
+        gap: 5rem;
+        padding: 4rem 0 4rem;
+    }
+    .about .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about .para {
+        width: 100%;
+        padding: 1rem 0  2rem;
+    }
+    .about .image {
+        width: 100%;
+    }
+    .headingSection h2 {
+        font-size: 1.5rem;
+    }
+}
