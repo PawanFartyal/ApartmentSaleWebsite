@@ -459,7 +459,7 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
     display: none;
 }
 /* Mobile Responsive */
-@media (max-width:420px) {
+@media (max-width:600px) {
     p{
         text-align: justify;
     }
