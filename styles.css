@@ -788,6 +788,7 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
          display: none;
     }
 }
+/* Tablet Responsive */
 @media (min-width:600px) and (max-width:1200px) {
      .formAndOverview {
         background:none;
@@ -809,7 +810,7 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
      .overview .heading h1{
         font-size: 4rem;
      }
-     .content .para {
+     .overview .content .para {
         text-align: center;
      }
      .toogleLine {
@@ -845,6 +846,7 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
         width: 100%;
         max-width: 500px;
         padding:1rem  0 1.5rem;
+        text-align: center;
     }
     .tabletHeadingSection {
         display: flex;
@@ -884,6 +886,14 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
     .search .form {
         width: 100%;
     }
+    /* Sale Section */
+    .cardName {
+        font-size: .75rem;
+    }
+    .card .para {
+        font-size: .65rem;
+    }
+    /* Footer Section */
     .quickLinks {
         flex-direction: column;
         gap: 2rem;
