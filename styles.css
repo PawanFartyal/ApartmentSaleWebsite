@@ -186,7 +186,7 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
     object-fit: cover;
 }
 .cardName {
-    font: .75rem;
+    font-size: 1rem;
 }
 .card .para {
     line-height: 1.2;
@@ -244,7 +244,6 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
 .priceCard:hover .buyNowBtn{
     background: var(--yellow);
 }
-
 /* Good Deal Section */
 .goodDeal {
     display: flex;
@@ -470,9 +469,6 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
     .formAndOverview {
         background: none;
     }
-    .bigScreen {
-         display: none;
-    }
     .mobile{
         display: block;
     }
@@ -500,6 +496,7 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
     }
     .overview .para {
         width: 100%;
+        text-align: center;
     }
     /* Search Section */
     .search, .aboutContainer {
@@ -520,8 +517,8 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
     /* About Section */
     .about {
         flex-direction: column;
-        gap: 5rem;
-        padding: 4rem 0 4rem;
+        padding: 0;
+        gap: 0;
     }
     .about .content {
         display: flex;
@@ -530,12 +527,186 @@ text-shadow: 0 2px var(--blue),2px 0 var(--blue),-2px 0 var(--blue),0 -2px var(-
     }
     .about .para {
         width: 100%;
-        padding: 1rem 0  2rem;
+        padding: 1rem 0;
     }
     .about .image {
         width: 100%;
     }
+    .mobHeadingSection {
+        display: flex;
+        padding-bottom: 1rem;
+        justify-content: center;
+    }
     .headingSection h2 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+    }
+    /* Sale Section */
+    .sale {
+        padding: 2rem 0;
+    }
+    /* Sale Cards */
+    .cardContainer {
+         flex-direction: column;
+         gap: 1.5rem;
+        padding: 2rem 0 3rem;
+    }
+    .cards {
+         flex-direction: column;
+         gap:1.25rem;
+    }
+    .card, .cardImage, .card .para {
+         width: 100%;
+    }
+    .cardImage {
+         object-fit: cover;
+    }
+    .cardName {
+         font-size: 1rem;
+    }
+    /* Pricing Section */
+    .pricing .headingSection, .pricing p {
+         width: 90%;
+         margin: auto;
+    }
+     .pricing .headingSection {
+         justify-content: center;
+    }
+    .priceCardContainer {
+         flex-direction: column;
+         gap: 1.5rem;
+         width: 90%;
+         padding: 1.5rem 0;
+    }
+    .priceCard {
+         width: 100%;
+    } 
+    .priceCard .content p {
+         text-align: center;
+    }
+     .priceCard .cardHeader {
+         padding: 1.5rem 0;
+    }
+     .buyNowBtn {
+        margin-top: 1rem;
+    }
+    /* Good Deal Section */
+    .goodDeal {
+         flex-direction: column-reverse;
+         width: 90%;
+         margin: auto;
+         padding: 0;
+         padding-bottom: 1.5rem;
+         gap: 1rem;
+    }
+    .goodDealContent {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+    }
+    .goodDeal .img {
+         width: 100%;
+         height: auto;
+    }
+    .goodDeal .imageTwo {
+         position: static;
+    }
+     .goodDealPara {
+         width: 100%;
+         padding:1rem  0 1.5rem;
+     }
+     /* Choose Section */
+     .chooseCardContainer {
+         flex-direction: column;
+         align-items: center; 
+     }  
+     .chooseImage {
+         width: 5rem;
+         height: 5rem;
+     }
+     /* Review Section */
+     .reviewCard {
+        gap: 2rem;
+        width: 90%;
+        margin: auto;
+        position: relative;
+        padding:2.5rem 1rem;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .review .imageContainer {
+        display: flex;
+        justify-content: center;
+    }
+    .review .imageContainer img {
+        width: 10rem;
+    }
+    .reviews {
+        flex-direction: column;
+        align-items: center;
+        padding: 3.5rem  0; 
+    }
+    .review .content{
+        padding-top: 1rem;
+    }
+    .review .para{
+        padding-top: 1rem;
+    }
+    .review{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .arrowBtn {
+         width: 30px;
+    }
+    .leftArrow {
+         bottom: 5px;
+         left: 38%;
+    }
+    .rightArrow {
+        bottom:5px;
+        right: 38%;
+    }
+    .arrowBtn {
+        position: absolute;
+    }
+    /* Footer Section */
+    .mapAndForm {
+        flex-direction: column;
+    }
+    .footer {
+        width: 90%;
+        margin: auto;
+    }
+    .contactForm {
+        align-items: center;
+    }
+    .map {
+        width: 100%;
+    }
+    .contactForm {
+        width: 100%;
+    }
+    .quickLinks {
+        flex-direction: column;
+    }
+    .quickLinksOne, .quickLinksTwo, .quickLinks {
+        gap: 0;
+        justify-content: space-between;
+    }
+    .horizontalLine {
+        width: 100%;
+        transform: none;
+    }
+    .copyRight {
+        width: 100%; 
+        transform: none;
+        text-align: center;
+    }
+    .socialLinks {
+        position: static;
+        justify-content: center;
+    }
+    .bigScreen {
+         display: none;
     }
 }
